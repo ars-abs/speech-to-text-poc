@@ -1,0 +1,10 @@
+[config]
+
+name="SpeechToText"
+binary_type="local"
+binary="speechtotext.aar"
+
+[dependencies]
+
+local=[]
+remote=[]
