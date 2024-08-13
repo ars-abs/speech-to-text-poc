@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://b51iejtl68bhj"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_tsmu4"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_tsmu4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = -2.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="listen" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117
+anchor_top = 0.065
+anchor_right = 0.505
+anchor_bottom = 0.236
+offset_left = -16.784
+offset_top = -2.12
+offset_right = -16.76
+offset_bottom = -1.92801
+grow_vertical = 0
+text = "Listen"
+
+[node name="TextEdit" type="TextEdit" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.284
+anchor_right = 0.516
+anchor_bottom = 0.935
+offset_left = -0.512001
+offset_top = -0.0320129
+offset_right = -0.432007
+offset_bottom = 0.119934
+wrap_mode = 1
+
+[node name="stop" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.539
+anchor_top = 0.062
+anchor_right = 0.94
+anchor_bottom = 0.233
+offset_left = -23.928
+offset_top = -0.176003
+offset_right = -23.8801
+offset_bottom = 0.0159912
+text = "Stop"
+
+[node name="TextEdit2" type="TextEdit" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.541
+anchor_top = 0.285
+anchor_right = 0.97
+anchor_bottom = 0.949
+offset_left = -0.231995
+offset_top = 0.319977
+offset_right = -4.44006
+offset_bottom = -7.95203
+wrap_mode = 1
+
+[connection signal="pressed" from="Control/listen" to="." method="_on_listen_pressed"]
+[connection signal="pressed" from="Control/stop" to="." method="_on_stop_pressed"]
