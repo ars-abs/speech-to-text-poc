@@ -3,6 +3,7 @@ extends Node
 var stt
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# #NOTE: Ask for permission _on_listen_pressed only if permission is not in granted permissions.
 	OS.request_permission("RECORD_AUDIO")
 	if Engine.has_singleton("SpeechToText"):
 		stt = Engine.get_singleton("SpeechToText")
